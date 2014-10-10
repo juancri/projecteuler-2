@@ -18,10 +18,6 @@ class MainClass
 		var old1 = 0;
 		var old2 = 1;
 		while (true)
-		{
-			var current = old1 + old2;
-			old1 = old2;
-			yield return (old2 = current);
-		}
+			yield return (old2 = old1 + (old1 = old2));
 	}
 }
